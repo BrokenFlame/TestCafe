@@ -15,16 +15,19 @@ const YearOfBirth = '<year of birth (4 digit)>'
 
 test('Get passport application renewal status ', async (t) => {
     await t.click('#cookie-banner-accept')
-    .click('#enabled-cookies-try-again')
-    .navigateTo('https://www.passport.service.gov.uk/track/reference')
-    .typeText('#reference', Reference)
-    .click(Selector('button').withText('Continue'))
-    .typeText('#applicant-email',EmailAddress)
-    .typeText('#date-of-birth-day', DayOfBirth)
-    .typeText('#date-of-birth-month', MonthOfBirth)
-    .typeText('#date-of-birth-year', YearOfBirth)
-    .click(Selector('button').withText('Continue'))
-    .takeScreenshot()
-    .expect(Selector('#header').innerText).eql('Your passport is on its way');
+        .click('#enabled-cookies-try-again')
+        .navigateTo('https://www.passport.service.gov.uk/track/reference')
+        .typeText('#reference', Reference)
+        .click(Selector('button').withText('Continue'))
+        .typeText('#applicant-email',EmailAddress)
+        .typeText('#date-of-birth-day', DayOfBirth)
+        .typeText('#date-of-birth-month', MonthOfBirth)
+        .typeText('#date-of-birth-year', YearOfBirth)
+        .click(Selector('button').withText('Continue'))
+        .takeScreenshot()
+        .expect(Selector('#header').innerText).eql('Your passport is on its way');
+    
+    await t.hover(Selector('table.status-table'))
+        .takeScreenshot();
     }
 );
