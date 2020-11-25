@@ -42,7 +42,7 @@ sudo dnf install code
 ```
 
 ### Create a new project and install TestCafe
-Replace "<Project Name>" with the name of your project.
+Replace "\<Project Name\>" with the name of your project.
 ```sh
 PROJECT_NAME=<Project Name>
 mkdir $PROJECT_NAME
