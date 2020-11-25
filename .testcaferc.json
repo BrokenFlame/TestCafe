@@ -1,5 +1,5 @@
 {
-	"browsers": ["firefox"],
+	"browsers": ["firefox", "chrome"],
 	"src": [
 		"tests/**/*.js",
 		"tests/**/*.feature"
