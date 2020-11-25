@@ -105,3 +105,17 @@ npx testcafe
 ```
 
 You can also append the brower name to the end of the command, to select a specific broswer, i.e. npx testcafe chrome.
+
+## Install the HTML reporter.
+Many reporters for Testcafe are available, it ships with "spec", "json", "xunit" etc. You can find additional reporters in npm searching for "testcafe-reporter-". To install the html report use:
+
+```sh
+npm install testcafe-reporter-html --save-dev
+````
+To execute a specific reporter ammend the configuration file. Or use the --reporter switch:
+
+```sh
+npx testcafe chrome --reporter json
+
+npx testcafe chrome --reporter html:report.html
+```
