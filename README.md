@@ -125,3 +125,8 @@ npx testcafe chrome --reporter json
 
 npx testcafe chrome --reporter html:report.html
 ```
+### It is useful to run a subset of tests based on the meta data using either the --test-meta or --fixture-meta switches as shown below:
+
+```sh
+npx testcafe chrome --test-meta type=minimal
+```
