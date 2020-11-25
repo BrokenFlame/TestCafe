@@ -1,6 +1,3 @@
-# TestCafe
-TestCafe Scripts
-
 # Instruction for CentOS 8
 
 ## Install NodeJs
@@ -13,10 +10,17 @@ sudo yum install -y nodejs
 ```
 
 ## Install FireFox
-```
+```sh
 sudo yum install firefox -y
 ```
 
+Install Chrome
+```sh
+sudo -i
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+yum install ./google-chrome-stable_current_*.rpm -y
+exit
+```
 
 ## Install Visual Studio Code: 
 
@@ -71,14 +75,14 @@ Create a basic configuration file for TestCafe named ".testcaferc.json" which sh
 ## Create the tests folder
 Create a folder named "tests" within the project to house all of the test documents (files).
 
-```
+```sh
 mkdir tests
 ```
 
 ## Create a Sample Test
 Create a sample test to check that every thing is working correctly.
 
-```
+```sh
 cat <<'EOF' > $PROJECT_NAME/sample_test.js
 const { Selector } = require('testcafe');
 
@@ -99,3 +103,5 @@ In Visual Studio Code, open the Project Folder.  Then open a new Terminal, and p
 ```sh
 npx testcafe
 ```
+
+You can also append the brower name to the end of the command, to select a specific broswer, i.e. npx testcafe chrome.
