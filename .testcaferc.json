@@ -4,6 +4,9 @@
 		"tests/**/*.js",
 		"tests/**/*.feature"
 	],
+	"reporter": [
+		"spec"
+	],
 	"screenshots": {
 		"path": "tests/screenshots/",
 		"takeOnFails": true,
