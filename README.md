@@ -46,7 +46,7 @@ npm install testcafe --save-dev
 ```
 
 ## Configure the TestCafe Project
-Create a basic configuration file for TestCafe named ".testcaferc.json" which should look something similar to the json below:
+In your project directory, create a basic configuration file for TestCafe named ".testcaferc.json". The contents of the file should look something similar to the json below:
 
 ```json
 {
