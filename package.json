@@ -1,0 +1,22 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ci": "npx testcafe chrome:headless --reporter xunit",
+    "ci-with-retry-on-failure": "npx testcafe chrome:headless --reporter xunit --quarantine-mode",
+    "test-firefox": "npx testcafe firefox",
+    "test-chrome": "npx testcafe chrome",
+    "test-with-debug": "npx testcafe chrome --debug-mode",
+    "test-with-debug-on-fail": "npx testcafe chrome --debug-on-fail --speed 0.8",
+    "test": "npx testcafe"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^1.9.4",
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
