@@ -1,6 +1,12 @@
-# Instruction for CentOS 8
+# TestCafe 
+This Repo is to provide both prebuilt tests/tests snippets to help DevOps Engineers to test application deployments. It is also a useful learning resource for anyone who would like to learn TestCafe.
 
-## Install NodeJs
+I have chosen to use TestCafe on CentOS 8 for in brower testing and Node containers for Chome headless testing.
+
+## Instruction for CentOS 8
+Below are instruction on how to setup TestCafe on CentOS 8. It is recommended that you complete all steps and do not skip ahead. 
+
+### Install NodeJs
 
 ```sh
 sudo yum -y install curl
@@ -9,12 +15,12 @@ curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 sudo yum install -y nodejs
 ```
 
-## Install FireFox
+### Install FireFox
 ```sh
 sudo yum install firefox -y
 ```
 
-Install Chrome
+### Install Chrome
 ```sh
 sudo -i
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
@@ -22,7 +28,7 @@ yum install ./google-chrome-stable_current_*.rpm -y
 exit
 ```
 
-## Install Visual Studio Code: 
+### Install Visual Studio Code: 
 
 ```sh
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -35,7 +41,7 @@ sudo dnf install code
 
 ```
 
-## Create a new project and install TestCafe
+### Create a new project and install TestCafe
 
 ```sh
 PROJECT_NAME=<Project Name>
@@ -45,7 +51,7 @@ npm init --yes
 npm install testcafe --save-dev
 ```
 
-## Configure the TestCafe Project
+### Configure the TestCafe Project
 In your project directory, create a basic configuration file for TestCafe named ".testcaferc.json". The contents of the file should look something similar to the json below:
 
 ```json
@@ -72,14 +78,14 @@ In your project directory, create a basic configuration file for TestCafe named 
 }
 ```
 
-## Create the tests folder
+### Create the tests folder
 Create a folder named "tests" within the project to house all of the test documents (files).
 
 ```sh
 mkdir tests
 ```
 
-## Create a Sample Test
+### Create a Sample Test
 Create a sample test to check that every thing is working correctly.
 
 ```sh
@@ -95,7 +101,7 @@ test('My first test', async (t) => {
 EOF
 ```
 
-## Run the sample test.
+### Run the sample test.
 Run the sample tests, and check the out output is okay. 1 Test should pass, none should fail.
 
 In Visual Studio Code, open the Project Folder.  Then open a new Terminal, and provide the following command to the terminal. *FireFox will launch and then close when the test is complete.*
@@ -106,7 +112,7 @@ npx testcafe
 
 You can also append the brower name to the end of the command, to select a specific broswer, i.e. npx testcafe chrome.
 
-## Install the HTML reporter.
+### Install the HTML reporter.
 Many reporters for Testcafe are available, it ships with "spec", "json", "xunit" etc. You can find additional reporters in npm searching for "testcafe-reporter-". To install the html report use:
 
 ```sh
